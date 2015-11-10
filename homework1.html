@@ -6,15 +6,16 @@
   </head>
 
 <style media="screen">
+body {
+  margin: 0;
+  background-image: url("http://cloud.avandamiri.com/image/3N410e2Q2Z3F/background.png");
+}
 header {
    height: 80px;
    width: 100%;
    background: rgb(196, 196, 196);
    overflow: auto;
-   margin-left: -10px;
-   margin-top: -10px;
-   margin-right: -100px;
-   border-bottom: solid black 1px;
+   border-bottom: solid grey 1px;
 }
 img {
   float: left;
@@ -23,14 +24,10 @@ img {
   margin-right: 2%;
   color: rgb(183, 183, 183);
 }
-body {
-  background-image: url("http://cloud.avandamiri.com/image/3N410e2Q2Z3F/background.png")
-}
 h1 {
   color: black;
   font-family: 'Lucida Grande';
 }
-
 button {
   position: relative;
   float: right;
@@ -77,10 +74,11 @@ hr {
   display: block;
   margin-top: 5em;
   margin-bottom: 5em;
-  margin-left: 13em;
-  margin-right: 13em;
-  border-style: inset;
-  border-width: thin;
+  margin-left: 17em;
+  margin-right: 17em;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 footer {
   color: grey;
@@ -91,18 +89,16 @@ footer {
 
   <body>
 
+
 <header>
-<img src="http://cloud.avandamiri.com/image/423B1n2p2v0U/acme-corp.jpg">
-
+<img src="http://cloud.avandamiri.com/image/423B1n2p2v0U/acme-corp.jpg" alt="Acme" width="200" height="55" />
 <nav>
-  <ul>
-    <li><button type="button" name="Sign Up">Sign Up</button></li>
-    <li><a href="#">Products</a></li>
-  </ul>
+    <button type="button" name="Sign Up">Sign Up</button>
+    <a href="#">Products</a>
 </nav>
-
 </header>
 
+<main>
 <section>
 <h1>Welcome to ACME Corp!</h1>
 <p>
@@ -118,6 +114,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
  </strong>
 </p>
 </section>
+</main>
 
 <hr>
 
