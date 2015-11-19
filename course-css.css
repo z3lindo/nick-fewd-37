@@ -8,6 +8,8 @@ header {
   height: 150px;
 }
 img {
+  display: block;
+  overflow: auto;
   margin: 0 auto;
 }
 h1 {
