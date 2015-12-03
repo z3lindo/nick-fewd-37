@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Blog</title>
+
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background-image: url("http://i.imgur.com/W3FL0UH.jpg?1");
+        background-size: cover;
+        font-family: sans-serif;
+        font-size: 18px;
+        line-height: 1.4em;
+        color: white;
+      }
+      main {
+        margin: 2em auto;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.5);
+        padding: 2em 3em;
+        max-width: 600px;
+      }
+      h1 {
+        margin-top: 0;
+        text-align: center;
+        color: white;
+      }
+      p {
+        color: white;
+      }
+      li {
+        color: white;
+      }
+      article {
+        padding-bottom: 1em;
+        margin-bottom: 2em;
+        border-bottom: 1px solid #ccc;
+      }
+      textarea {
+        display: block;
+        width: 100%;
+      }
+      a {
+        font-weight: bold;
+        text-decoration: none;
+        color: #049cd8;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      textarea,
+      .comment {
+        border: 1px solid #ccc;
+        padding: .5em 1em;
+        margin: 1em 0;
+        border-radius: 5px;
+      }
+      textarea {
+        font-size: inherit;
+      }
+      button {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-bottom-width: 2px;
+        border-radius: 5px; font-size: inherit;
+        color: white;
+        background-color: #049cd8;
+        padding: .5em 1em;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>Music is my biggest passion!</h1>
+
+        <p>
+          I've been going to shows, concerts, raves, whatever you want to call them, for as long as I can remember. Music has always been a huge part of my life and has gotten me through some really rough times. It keeps me happy and gives me the motivation I need to keep going when my self esteem is low.
+        </p>
+
+        <p>
+          Here is a quick list of DJ's that I am currently obsessed with. I'm really into deep house / trance so if that's your thing, you might like these DJ's too.
+        </p>
+
+        <ul>
+          <li><a href="http://www.aboveandbeyond.nu/">Above and Beyond</li>
+          <li><a href="http://duskymusic.com/">Dusky</li>
+          <li><a href="https://soundcloud.com/vintageculturemusic">Vintage Culture</li>
+          <li><a href="https://soundcloud.com/meandmytoothbrush">Me &amp; My Toothbrush</li>
+          <li><a href="https://soundcloud.com/eric-prydz">Eric Prydz</li>
+        </ul>
+
+        <p>
+          What are some of your favorite artists?
+        </p>
+
+
+      </article>
+
+      <div class="like">
+        <a href="#" class="like-link">Like</a>
+        (<span class="like-count">0</span>)
+      </div>
+
+      <div id="comments">
+        <!--
+        <div class="comment">
+          You're looking good!
+        </div>
+        -->
+      </div>
+
+      <form id="new-comment">
+        <textarea id="new-comment-body" placeholder="Leave a comment..."></textarea>
+        <button type="submit">Comment</button>
+      </form>
+    </main>
+
+    <script>
+    var link = document.querySelector(".like-link");
+    var form = document.querySelector("#new-comment");
+
+    link.addEventListener("click", like);
+    form.addEventListener("submit", comment);
+
+    function like(event) {
+      event.preventDefault();
+      var Count = document.querySelector(".like-count")
+      var NewCountValue = Count.textContent
+      Count.textContent = parseInt(NewCountValue) + 1;
+    }
+
+    function comment(event) {
+      event.preventDefault();
+      var parent = document.querySelector("#comments");
+      var newComment = document.querySelector("#new-comment-body");
+      var newDiv = document.createElement("div");
+      newDiv.classList.add("comment")
+      newDiv.textContent = newComment.value
+      parent.appendChild(newDiv);
+      document.querySelector("#new-comment-body").value=null;
+    }
+
+    </script>
+  </body>
+</html>

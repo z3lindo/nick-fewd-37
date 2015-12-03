@@ -1,6 +1,6 @@
 body {
   background-color: white;
-  margin: 0;
+  margin: 0 auto;
 }
 header {
   margin: 0 auto;
@@ -8,9 +8,7 @@ header {
   height: 150px;
 }
 img {
-  display: block;
-  overflow: auto;
-  margin: 0 auto;
+  overflow: hidden;
 }
 h1 {
     text-align: center;
@@ -35,8 +33,6 @@ ul {
   border: 10px;
 }
 li {
-  margin: 0 auto;
-  font-size: 16;
   display: inline;
   padding: 100px;
 }

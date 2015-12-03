@@ -90,32 +90,52 @@ footer {
 <body>
 
 
-<header>
-<img src="http://cloud.avandamiri.com/image/423B1n2p2v0U/acme-corp.jpg" alt="Acme" width="200" height="55" />
-<nav>
-    <button type="button" name="Sign Up">Sign Up</button>
-    <a href="#">Products</a>
-</nav>
-</header>
+<script type="text/javascript">
 
-<main>
-<section>
-<h1>Welcome to ACME Corp!</h1>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
 
-<p>
-  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
-</section>
-</main>
+var body = document.querySelector("body");
+var header = document.createElement("header");
+body.appendChild(header);
 
-<hr>
+var img = document.createElement("img");
+img.setAttribute("src", "http://cloud.avandamiri.com/image/423B1n2p2v0U/acme-corp.jpg")
+img.setAttribute("alt", "ACME Corp Logo")
+img.setAttribute("width", "200px")
+img.setAttribute("height", "55px")
+header.appendChild(img)
 
-<footer>
-  Copyright, 2015
-</footer>
+var section = document.createElement("section")
+body.appendChild(section)
+
+var heading = document.createElement("h1")
+section.appendChild(heading)
+heading.textContent = "Welcome to ACME Corp"
+
+var button = document.createElement("button");
+header.appendChild(button)
+button.textContent = "Sign Up"
+
+var a = document.createElement("a")
+header.appendChild(a)
+a.textContent = "Product"
+
+var p = document.createElement("p");
+section.appendChild(p)
+p.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
+var p = document.createElement("p");
+section.appendChild(p)
+p.textContent ="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+var hr = document.createElement("hr");
+body.appendChild(hr)
+
+var footer = document.createElement("footer");
+body.appendChild(footer)
+footer.textContent ="Copyright, 2015"
+
+
+</script>
 
   </body>
 </html>
