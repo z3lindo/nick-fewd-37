@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+}
+.banner {
+  color: white;
+  height: 10em;
+}
+.fixed {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+}
+.menu ul {
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px 0;
+    background-color: black;
+}
+.waves {
+  width: 100%;
+  z-index: 0;
+}
+#nav li {
+  display: inline;
+  padding: 100px;
+  font-family: 'Raleway', sans-serif;
+}
+#nav li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+#nav li a:hover {
+    background-color: grey;
+}
+main {
+  margin: 0 auto;
+}
+h1 {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 72px;
+  padding-top: 10px;
+  margin: 0;
+}
+section {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 10px;
+  float: left;
+}
+p {
+  margin: 0;
+  background: black;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  color: white;
+}
+section li a {
+  text-decoration: underline;
+  color: black;
+  align-items: center;
+}
+section li {
+  list-style-type: none;
+  font-family: 'Raleway', sans-serif;
+  padding: 5px;
+  text-align: center;
+  padding-right: 45px;
+}

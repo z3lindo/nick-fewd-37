@@ -1,48 +1,79 @@
 <!DOCTYPE html>
 <html>
-
-<meta charset="utf-8">
-
-<link href="course-css.css" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
-
-<head>
-<title>Nicholas Baldassini</title>
-</head>
-
-<header>
-  <h1>Nicholas Baldassini</h1>
-
-  <p>"Letting go of the past is your first step to happiness."</p>
-</header>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  </head>
 
 <body>
+  <header>
+    <div class="banner"></div>
+    <!-- link your logo image here. style it in stylesheet -->
+  </header>
 
-<ul>
-  <li><a href="#">Home</a></li>
-  <li><a href="aboutme.html">About Me</a></li>
+<div class="menu"> <!-- holds all menu elements inside this div -->
+
+<ul id="nav">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#About Me">About Me</a></li>
   <li><a href="https://www.facebook.com/baldassini">Facebook</a></li>
-  <li><a href="portfolio.html">Portfolio</a></li>
+  <li><a href="https://www.linkedin.com/in/baldassini">LinkedIn</a></li>
 </ul>
 
-<img src="roses2.jpg" "roses">
+</div>
 
-<h2>
-  Homework Assignments:
-</h2>
+<div class="photo">
+  <!-- holds the waves photo in its own seperate div -->
+  <img class="waves" src="http://i.imgur.com/EdAGwnV.jpg?1" alt="sunset" />
 
-<nav>
-  <ul>
-    <li><a href="homework1.html">ACME Homework</a></li>
-    <li><a href="Calculators.html">Calculators</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="javascriptACME.html">ACME Javascript</a></li>
-  </ul>
-</nav>
+</div>
 
-<footer>
-  &copy; Copyright, 2015
-</footer>
+<main>
 
-</body>
+<h1>Nicholas Baldassini</h1>
+
+<section class="homework">
+
+<p>Homework Assignments</p>
+
+<ul class="hw">
+  <li><a href="homework1.html">ACME Homework</a></li>
+  <li><a href="Calculators.html">Calculators</a></li>
+  <li><a href="blog.html">Blog</a></li>
+  <li><a href="javascriptACME.html">ACME Javascript</a></li>
+</ul>
+
+</section>
+
+<section class="inclass">
+
+<p>In Class Exercises</p>
+
+<ul class="inclass">
+  <li><a href="#">To Do List</a></li>
+  <li><a href="#">Piano</a></li>
+</ul>
+
+</section>
+
+</main>
+<script type="text/javascript">
+
+//javascript code goes here
+
+var menu = document.querySelector('.menu');
+var origOffsetY = menu.offsetTop;
+
+function onScroll(event) {
+  window.scrollY >= origOffsetY ?
+  menu.classList.add('fixed'):
+  menu.classList.remove('fixed');
+}
+document.addEventListener('scroll', onScroll);
+
+</script>
+  </body>
 </html>
