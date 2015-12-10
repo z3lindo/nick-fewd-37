@@ -12,14 +12,14 @@ body {
    right: 0;
 }
 .menu ul {
-    margin: 0 auto;
-    width: 100%;
-    padding: 10px 0;
-    background-color: black;
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  padding: 10px 0;
+  background-color: black;
 }
 .waves {
   width: 100%;
-  z-index: 0;
 }
 #nav li {
   display: inline;
