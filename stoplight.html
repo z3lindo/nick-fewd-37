@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stoplight</title>
+  </head>
+  <style media="screen">
+body {
+  box-sizing: border-box;
+}
+h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 48px;
+}
+ul {
+  margin: 0 auto;
+  padding: 10px;
+}
+li {
+  list-style: none;
+  display: inline;
+}
+div {
+}
+.stoplight {
+  width: 200px;
+  height: 400px;
+  background-color: #F0C627;
+  border-radius: 10px;
+  border: solid 1px #BE6E00;
+  margin-left: auto;
+  margin-right: auto;
+}
+.light {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #6D570B;
+  border-style: inset;
+}
+  </style>
+
+  <body>
+
+    <header>
+
+      <h1>Stoplight</h1>
+
+      <ul>
+        <li><button type="button" name="Stop">Stop</button></li>
+        <li><button type="button" name="Slow">Slow</button></li>
+        <li><button type="button" name="Go">Go</button></li>
+        <li><button type="button" name="Caution">Caution</button></li>
+      </ul>
+
+    </header>
+
+    <div class="container">
+
+      <div class="stoplight">
+
+        <div class="light" id="red"></div>
+
+        <div class="light" id="yellow"></div>
+
+        <div class="light" id="green"></div>
+
+      </div>
+
+    </div>
+  </body>
+  <script type="text/javascript">
+
+  
+
+  </script>
+</html>
