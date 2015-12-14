@@ -5,7 +5,7 @@
     <title>Stoplight</title>
   </head>
   <style media="screen">
-body {
+*{
   box-sizing: border-box;
 }
 h1 {
@@ -14,6 +14,7 @@ h1 {
   font-size: 48px;
 }
 ul {
+  text-align: center;
   margin: 0 auto;
   padding: 10px;
 }
@@ -39,7 +40,27 @@ div {
   width: 100px;
   height: 100px;
   background-color: #6D570B;
+  border-style: solid;
+  border-width: 6px 2px 1px 2px;
+  border-color: #1C1706;
+  margin-top: 20px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, .5);
 }
+.red {
+  background-color: #EF4136;
+  box-shadow: 0 0 20px 1px rgba(239, 65, 54, 0.5);
+}
+.yellow {
+  background-color: #F9ED32
+}
+.green {
+  background-color: #14ED19;
+  box-shadow: 0 0 20px 1px rgba(95, 180, 70, 0.5);
+}
+.caution {
+  background-color: yellow;
+}
+
   </style>
 
   <body>
@@ -49,13 +70,15 @@ div {
       <h1>Stoplight</h1>
 
       <ul>
-        <li><button type="button" name="Stop">Stop</button></li>
-        <li><button type="button" name="Slow">Slow</button></li>
-        <li><button type="button" name="Go">Go</button></li>
-        <li><button type="button" name="Caution">Caution</button></li>
+        <li><button type="button" id="stop">Stop</button></li>
+        <li><button type="button" id="slow">Slow</button></li>
+        <li><button type="button" id="go">Go</button></li>
+        <li><button type="button" id="caution">Caution</button></li>
       </ul>
 
     </header>
+
+    <main>
 
     <div class="container">
 
@@ -70,10 +93,61 @@ div {
       </div>
 
     </div>
-  </body>
+
   <script type="text/javascript">
 
+var stop = document.querySelector("#stop");
+var slow = document.querySelector("#slow");
+var go = document.querySelector("#go");
+var caution = document.querySelector("#caution");
+var timer;
 
+var red = document.querySelector("#red");
+var yellow = document.querySelector("#yellow");
+var green = document.querySelector("#green");
 
-  </script>
+stop.addEventListener("click", actionStop)
+slow.addEventListener("click", actionSlow)
+go.addEventListener("click", actionGo)
+caution.addEventListener("click", actionCaution)
+
+function actionCaution(event) {
+  event.preventDefault();
+  red.classList.remove("red")
+  green.classList.remove("green")
+  timer = setInterval(toggleSlow, 1000);
+}
+
+function toggleSlow() {
+  yellow.classList.toggle("yellow")
+}
+
+function actionStop(event) {
+  event.preventDefault();
+  red.classList.add("red");
+  green.classList.remove("green");
+  yellow.classList.remove("yellow");
+  clearInterval(timer);
+}
+
+function actionGo(event) {
+  event.preventDefault();
+  green.classList.add("green");
+  red.classList.remove("red");
+  yellow.classList.remove("yellow");
+  clearInterval(timer);
+}
+
+function actionSlow(event) {
+  event.preventDefault();
+  yellow.classList.remove("yellow");
+  yellow.classList.add("yellow");
+  red.classList.remove("red");
+  green.classList.remove("green");
+  clearInterval(timer);
+}
+
+    </script>
+  </main>
+ </body>
 </html>

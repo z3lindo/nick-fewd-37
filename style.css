@@ -65,6 +65,9 @@ section li a {
   color: black;
   align-items: center;
 }
+section li a:hover {
+  color: grey;
+}
 section li {
   list-style-type: none;
   font-family: 'Raleway', sans-serif;
