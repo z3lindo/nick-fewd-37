@@ -22,6 +22,32 @@ body {
 .beach {
   width: 100%;
 }
+.fixed {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+}
+.menu ul {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  padding: 10px 0;
+  background-color: black;
+}
+#nav li {
+  display: inline;
+  padding: 110px;
+  font-family: 'Raleway', sans-serif;
+}
+#nav li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+#nav li a:hover {
+    background-color: grey;
+}
 h1 {
   font-family: 'Lobster';
   text-align: center;
@@ -50,11 +76,33 @@ footer {
   <!-- logo image here  -->
 </div>
 
+<div class="menu"> <!-- holds all menu elements inside this div -->
+
+<ul id="nav">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="aboutme.html">About Me</a></li>
+  <li><a href="https://www.facebook.com/baldassini">Facebook</a></li>
+  <li><a href="https://www.linkedin.com/in/baldassini">LinkedIn</a></li>
+</ul>
+
+</div>
+
 <div class="photo1">
   <!-- insert photo here -->
   <img class="beach" src="http://i.imgur.com/PeWSeGz.jpg" alt="photo1" />
 </div>
 
+<script type="text/javascript">
+
+var menu = document.querySelector('.menu');
+var origOffsetY = menu.offsetTop;
+
+function onScroll(event) {
+  window.scrollY >= origOffsetY ? menu.classList.add('fixed'): menu.classList.remove('fixed');
+}
+document.addEventListener('scroll', onScroll);
+
+</script>
 
 </div>
 <h1>About Me</h1>
