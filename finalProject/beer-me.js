@@ -31,16 +31,17 @@ console.log(results);
 
     var description = document.createElement("div");
     description.textContent = results["data"][i].description;
-    // description.classList.add("beer-description");
+    description.classList.add("beer-description");
 
     var labels = document.createElement("img");
     labels.setAttribute("src", results["data"][i]["labels"]["icon"]);
+    labels.classList.add("icon");
 
+    divContainer.appendChild(labels);
     beerList.appendChild(divContainer);
     divContainer.appendChild(nameContainer);
     nameContainer.appendChild(name);
     divContainer.appendChild(description);
-    divContainer.appendChild(labels);
 
     ul.appendChild(beerList)
 
