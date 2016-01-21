@@ -15,6 +15,7 @@ var ul = document.querySelector("#beers");
 
 function resultsReceived(results) {
   // body...
+console.log(results);
 
   for (var i = 0; i < results.data.length; i++) {
     var divContainer = document.createElement("div")
@@ -22,21 +23,24 @@ function resultsReceived(results) {
     var beerList = document.createElement("li");
     beerList.classList.add("beer");
 
-    var labels = document.createElement("labels");
-    labels.setAttribute("src", "https://s3.amazonaws.com/brewerydbapi/beer/" + results["data"][i][labels]);
-
     var nameContainer = document.createElement("div")
     var name = document.createElement("a")
     name.textContent = results["data"][i]["name"];
-    name.setAttribute("href", "http://www.brewerydb.com/beer/" + results["data"][i].id)
+    name.setAttribute("href", "http://www.brewerydb.com/beer/" + results["data"][i].id);
     nameContainer.classList.add("beer-name");
 
+    var description = document.createElement("div");
+    description.textContent = results["data"][i].description;
+    // description.classList.add("beer-description");
 
+    var labels = document.createElement("img");
+    labels.setAttribute("src", results["data"][i]["labels"]["icon"]);
 
     beerList.appendChild(divContainer);
     divContainer.appendChild(nameContainer);
-    divContainer.appendChild(labels);
     nameContainer.appendChild(name);
+    divContainer.appendChild(description);
+    divContainer.appendChild(labels);
 
     ul.appendChild(beerList)
 
