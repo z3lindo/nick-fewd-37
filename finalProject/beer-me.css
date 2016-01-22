@@ -1,15 +1,16 @@
 * { box-sizing: border-box; }
 body {
   font-family: Arial;
-  margin: 0;
+  margin: 0 auto;
   background-image: url("http://i.imgur.com/vikuOjk.jpg?1");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  background-attachment: fixed;
+  /*height: 100%;
   min-height: 100%;
   max-height: 100%;
   width: 100%;
-  overflow: scroll;
+  overflow: scroll;*/
 }
 h1 {
   font-family: 'Montserrat', sans-serif;
@@ -17,6 +18,9 @@ h1 {
   color: gold;
   text-align: center;
   margin: 0 auto;
+  position: fixed;
+  left: 375px;
+  text-shadow: 2px 1px 7px rgba(150, 150, 150, 1);
 }
 h1 span {
   font-family: 'Montserrat', sans-serif;
@@ -24,24 +28,25 @@ h1 span {
   text-align: center;
   color: white;
   margin: 0 auto;
+  text-shadow: 2px 1px 7px rgba(150, 150, 150, 1);
 }
 .wrapper {
   height: 100%;
-  /*padding: 200px;*/
-  overflow: auto;
-  position: fixed;
+  /* padding: 200px; */
+  overflow: scroll;
+  position: absolute;
   width: 100%;
-}
-form {
-  display: block;
-  position: fixed;
-  width: 48%;
-  z-index: -1px;
 }
 main {
   margin: 2em auto;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);*/
   max-width: 600px;
+}
+.field {
+  position: fixed;
+  width: 48%;
+  z-index: 1;
+  top: 200px;
 }
 input, button {
   margin: 0;
@@ -64,15 +69,6 @@ button:hover {
   color: white;
   background-color: #e3c000
 }
-/*.list {
-  padding: 10px;
-  position: absolute;
-  margin-top: 20px;
-  padding-top: 10px;
-  padding-bottom: 65px;
-  padding-left: 10px;
-  padding-right: 10px;
-}*/
 a {
   font-size: 24px;
   color: gold;
@@ -80,18 +76,22 @@ a {
   padding-left: 40px;
   display: inline-block;
   position: relative;
-  z-index: 10;
+  /*z-index: 10;*/
 }
 a:hover {
   color: white;
   text-decoration: underline;
 }
-div {
-  display: inline;
-}
 #beers {
   list-style: none;
   padding-left: 0px;
+  padding-top: 200px;
+  /*position: absolute;*/
+}
+.list {
+  position: relative;
+  overflow: hidden;
+  display: inline;
 }
 .beer {
   background-color: rgba(0, 0, 0, 0.5);
@@ -103,20 +103,20 @@ div {
   padding-left: 10px;
   padding-right: 10px;
 }
-img.icon {
+/*img.icon {
   padding-top: 5px;
   display: inline-block;
-}
+}*/
 .beer-name {
-  display: inline;
+  display: inline-block;;
   position: absolute;
+  left: 55px
 }
 .beer-description {
   color: white;
-  padding-left: 40px;
-  display: inline-block;
-  position: absolute;
-  padding-top: 30px;
+  position: relative;
+  top: -40px;
+  padding-left: 85px;
 }
 .icons {
   display: inline-block;
