@@ -14,10 +14,15 @@ function formSubmitted(event) {
 var ul = document.querySelector("#beers");
 
 function resultsReceived(results) {
-  // body...
+
 // console.log(results);
 
   for (var i = 0; i < results.data.length; i++) {
+// type for loop here for the no icon statement
+// if (results["data"][i]["labels"]["icon"] == undefined) {
+//   $(#labels) = "http://defaultimage.jpg";
+// }
+
     var divContainer = document.createElement("div")
 
     var beerList = document.createElement("li");
