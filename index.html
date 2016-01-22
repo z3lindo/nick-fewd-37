@@ -12,11 +12,12 @@
 
 <body>
   <header>
-    <div class="banner"></div>
-    <!-- link your logo image here. style it in stylesheet -->
+    <div class="banner">
+      <img class="logo" src="http://i.imgur.com/JkEI1tt.jpg?1" alt="logo2.jpg" />
+    </div>
   </header>
 
-<div class="menu"> <!-- holds all menu elements inside this div -->
+<div class="menu">
 
 <ul id="nav">
   <li><a href="http://z3lindo.github.io/nick-fewd-37/">Home</a></li>
@@ -71,10 +72,13 @@ var menu = document.querySelector('.menu');
 var origOffsetY = menu.offsetTop;
 
 function onScroll(event) {
-  window.scrollY >= origOffsetY ? menu.classList.add('fixed'): menu.classList.remove('fixed');
+  window.scrollY >= origOffsetY ?
+  menu.classList.add('fixed'):
+  menu.classList.remove('fixed');
 }
 document.addEventListener('scroll', onScroll);
 
 </script>
+
   </body>
 </html>

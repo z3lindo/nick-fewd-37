@@ -1,16 +1,11 @@
 * { box-sizing: border-box; }
 body {
-  font-family: Arial;
+  font-family: 'Roboto', sans-serif;
   margin: 0 auto;
   background-image: url("http://i.imgur.com/vikuOjk.jpg?1");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  /*height: 100%;
-  min-height: 100%;
-  max-height: 100%;
-  width: 100%;
-  overflow: scroll;*/
 }
 h1 {
   font-family: 'Montserrat', sans-serif;
@@ -20,7 +15,6 @@ h1 {
   margin: 0 auto;
   position: fixed;
   left: 375px;
-  text-shadow: 2px 1px 7px rgba(150, 150, 150, 1);
 }
 h1 span {
   font-family: 'Montserrat', sans-serif;
@@ -28,18 +22,15 @@ h1 span {
   text-align: center;
   color: white;
   margin: 0 auto;
-  text-shadow: 2px 1px 7px rgba(150, 150, 150, 1);
 }
 .wrapper {
   height: 100%;
-  /* padding: 200px; */
   overflow: scroll;
   position: absolute;
   width: 100%;
 }
 main {
   margin: 2em auto;
-  /*box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);*/
   max-width: 600px;
 }
 .field {
@@ -70,6 +61,7 @@ button:hover {
   background-color: #e3c000
 }
 a {
+  font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   color: gold;
   text-decoration: none;
@@ -86,7 +78,6 @@ a:hover {
   list-style: none;
   padding-left: 0px;
   padding-top: 200px;
-  /*position: absolute;*/
 }
 .list {
   position: relative;
@@ -95,6 +86,7 @@ a:hover {
 }
 .beer {
   background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 9px 9px 69px -9px rgba(0,0,0,0.75);
   margin-top: 20px;
   border: 1px solid white;
   position: relative;
@@ -103,10 +95,12 @@ a:hover {
   padding-left: 10px;
   padding-right: 10px;
 }
-/*img.icon {
-  padding-top: 5px;
+.icons {
   display: inline-block;
-}*/
+  position: absolute;
+  float: left;
+  padding-top: 5px
+}
 .beer-name {
   display: inline-block;;
   position: absolute;
@@ -115,12 +109,18 @@ a:hover {
 .beer-description {
   color: white;
   position: relative;
-  top: -40px;
+  top: -35px;
   padding-left: 85px;
 }
-.icons {
-  display: inline-block;
-  position: absolute;
-  float: left;
-  padding-top: 5px
+.abv {
+  color: gold;
+  position: relative;
+  top: -31px;
+  padding-left: 85px;
+}
+.organic {
+  color: gold;
+  position: relative;
+  top: -50px;
+  padding-left: 127px;
 }

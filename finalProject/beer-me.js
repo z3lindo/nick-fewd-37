@@ -15,7 +15,7 @@ var ul = document.querySelector("#beers");
 
 function resultsReceived(results) {
   // body...
-console.log(results);
+// console.log(results);
 
   for (var i = 0; i < results.data.length; i++) {
     var divContainer = document.createElement("div")
@@ -37,11 +37,21 @@ console.log(results);
     labels.setAttribute("src", results["data"][i]["labels"]["icon"]);
     labels.classList.add("icon");
 
+    var abv = document.createElement("div");
+    abv.textContent = results["data"][i]["abv"];
+    abv.classList.add("abv");
+
+    var organic = document.createElement("div")
+    organic.textContent = results["data"][i]["isOrganic"];
+    organic.classList.add("organic");
+
     divContainer.appendChild(labels);
     beerList.appendChild(divContainer);
     divContainer.appendChild(nameContainer);
     nameContainer.appendChild(name);
     divContainer.appendChild(description);
+    divContainer.appendChild(abv);
+    divContainer.appendChild(organic);
 
     ul.appendChild(beerList)
 
