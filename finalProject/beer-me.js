@@ -43,11 +43,11 @@ function resultsReceived(results) {
     labels.classList.add("icon");
 
     var abv = document.createElement("div");
-    abv.textContent = results["data"][i]["abv"];
+    abv.textContent = "abv = " + results["data"][i]["abv"];
     abv.classList.add("abv");
 
     var organic = document.createElement("div")
-    organic.textContent = results["data"][i]["isOrganic"];
+    organic.textContent = "Organic = " + results["data"][i]["isOrganic"];
     organic.classList.add("organic");
 
     divContainer.appendChild(labels);

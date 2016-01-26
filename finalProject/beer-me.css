@@ -15,6 +15,18 @@ h1 {
   margin: 0 auto;
   position: fixed;
   left: 375px;
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 47%;
+  }
+  to {
+    margin-left: 0%;
+    width: 43%;
+  }
 }
 h1 span {
   font-family: 'Montserrat', sans-serif;
@@ -35,7 +47,7 @@ main {
 }
 .field {
   position: fixed;
-  width: 48%;
+  width: 49%;
   z-index: 1;
   top: 200px;
 }
@@ -43,7 +55,8 @@ input, button {
   margin: 0;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom-width: 2px;
-  border-radius: 5px; font-size: inherit;
+  border-radius: 5px;
+  font-size: inherit;
   padding: .5em 1em;
   font-family: 'PT Sans', sans-serif;
 }
@@ -111,6 +124,7 @@ a:hover {
   position: relative;
   top: -35px;
   padding-left: 85px;
+  padding-top: 25px;
 }
 .abv {
   color: gold;
@@ -122,5 +136,5 @@ a:hover {
   color: gold;
   position: relative;
   top: -50px;
-  padding-left: 127px;
+  padding-left: 160px;
 }
